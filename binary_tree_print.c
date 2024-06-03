@@ -20,19 +20,19 @@ int print_t(binary_tree_t *tree, int is_left, int offset, int depth, char s)
 	int i;
 
 	(void)is_left;
-	
+
 	if (!tree)
 		return (0);
-	
+
 	sprintf(b, "(%03d)", tree->n);
-	
+
 	left = print_t(tree->left, 1, offset, depth + 1, ' ');
 	right = print_t(tree->right, 0, offset + left + width, depth + 1, ' ');
-	
+
 	for (i = 0; i < offset; i++)
 		printf(" ");
 	printf("%s", b);
-	
+
 	if (depth && s == '-')
 	{
 		for (i = 0; i < width; i++)
@@ -40,7 +40,7 @@ int print_t(binary_tree_t *tree, int is_left, int offset, int depth, char s)
 		printf(".");
 	}
 	printf("\n");
-	
+
 	return (left + width + right);
 }
 
@@ -54,4 +54,3 @@ void binary_tree_print(const binary_tree_t *tree)
 		return;
 	print_t((binary_tree_t *)tree, 0, 0, 0, '-');
 }
-
