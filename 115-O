@@ -1,0 +1,6 @@
+Insertion:
+	- Average Case: O(log N)
+Removal:
+	- Averag Case : O(log N)
+Searching:
+	- Average Case: O(log N)
