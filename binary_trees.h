@@ -65,8 +65,13 @@ bst_t *array_to_bst(int *array, size_t size);
 bst_t *bst_search(const bst_t *tree, int value);
 bst_t *find_min(bst_t *node);
 bst_t *bst_remove(bst_t *root, int value);
-int max(int a, int b);
-int height(const binary_tree_t *tree);
 int binary_tree_is_avl(const binary_tree_t *tree);
+avl_t *avl_insert(avl_t **tree, int value);
+
+/* AVL specific prototypes */
+avl_t *insert_avl(avl_t **tree, avl_t *parent, int value);
+int height(const binary_tree_t *node);
+int max(int a, int b);
+avl_t *balance_tree(avl_t *tree, int value);
 
 #endif /* BINARY_TREES_H */
